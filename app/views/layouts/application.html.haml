@@ -6,7 +6,7 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     / %link{:href => "application.scss", :rel => "stylesheets"}/
   %body
-    %header
+    %header.clearfix
       %p.heading-sentence チャットグループが作成されました
     .contents
       .left-contents
@@ -46,17 +46,6 @@
             %p.chat-text おはよう
         .footer-content
           .form_content
-            / フォントawesomeの画像をダウンロードして無理やり挿入するも不可
-            / %input#file_01.file{:type => "file"}/
-            / %label.file_mask
-            /   %span
-            /     %img{:src => "clictest.jpeg-"}/
-            /   %input#mask_file_01{:type => "text"}/
-
-            / ファイルボタンを消せるがfontawesomeの画像挿入が不可
-            / %input#js-upload{:style => "display:none", :type => "file"}/
-
-            / 画像クリックできるがファイルボタンが表示される
             %label.upload-label{for: "upload-icon"}
               %i.fa.fa-picture-o
                 = file_field_tag :image, id: "upload-icon",style: "display:none"
