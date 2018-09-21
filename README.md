@@ -37,37 +37,34 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|id|integer|null: false|
-|user_id|integer|null: false, foreign_key: true|
-|chat_id|integer|null: false, foreign_key: true|
+|group_name|integer|null: false|
 
 ### Association
-- has_many :menbers
 - has_many :users, through: :members
+- has_many :members
+- has_many :messages
 
 ## Usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|id|integer|null: false|
-|chat_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
-|mail|string|null: false|
+|nickname|integer|null: false,add_index unique: true|
+|mail|string|null: false,add_index unique: true|
 |password|string|null: false|
 
 
 ### Association
 - has_many :groups, through: :members
-- has_many :chats
+- has_many :members
+- has_many :messages
 
-## chatsテーブル
+## messagesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|id|integer|null: false|
+|image|integer||
+|text|integer||
 |user_id|integer|null: false, foreign_key: true|
-|groups_id|integer|null: false, foreign_key: true|
-
 
 
 ### Association
