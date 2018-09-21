@@ -6,6 +6,8 @@
 body, html {
   height: 100%;
   background-color: white;
+  min-width: 900px;
+  // width: 900px;
 }
 
 h1, h2, h3, h4, h5, h6, p, body {
@@ -16,11 +18,15 @@ h1, h2, h3, h4, h5, h6, p, body {
   padding: 0;
 }
 
+.wrapper{
+  min-width: 960px;
+  }
 
 
 header {
   background-color:#38AEF0;
   height: 50px;
+  // width: calc( 100vw - 50px );
   width: 100%;
   position: fixed;
   z-index: 1;
@@ -43,7 +49,7 @@ header {
     border: 1px solid #38AEF0;
     font-size: 15px;
     float:right;
-    margin: 28px 20px 0;
+    margin: 28px 40px 0;
     padding: 12.5px 20px;
    }
   .left-contents {
@@ -67,15 +73,15 @@ header {
       }
       .fa-pencil-square-o{
         color:#FFF;
-        position:absolute;
-        top:40px;
-        right:70px;
+        float: right;
+        padding-right: 5px;
+        padding-top: 40px;
       }
       .fa-cog {
         color:#FFF;
-        position:absolute;
-        top:40px;
-        right:55px;
+        float: right;
+        padding-right: 20px;
+        padding-top: 40px;
       }
     }
     .leftbottom-content {
@@ -117,7 +123,8 @@ header {
     .main-header {
       border:#d0d0d0 solid 1px;
       height: 100px;
-      width: 100%;
+      width: calc( 100vw - 300px );
+      // width: 110%;
       .header-groupname {
         color: #333;
         font-size: 20px;
@@ -138,6 +145,7 @@ header {
         background-color: red;
         .chat-name {
           font-size:16px;
+          font-weight: bold;
           color:#434A54;
           float:left;
          }
@@ -146,6 +154,7 @@ header {
           padding-left:10px;
           color:#999999;
           float:left;
+          padding-top: 4px;
          }
         }
         .text-box {
@@ -163,6 +172,7 @@ header {
         background-color: red;
         .chat-name {
           font-size:16px;
+          font-weight: bold;
           color:#434A54;
           float:left;
          }
@@ -171,6 +181,7 @@ header {
           padding-left:10px;
           color:#999999;
           float:left;
+          padding-top: 4px;
          }
         }
         .text-box {
@@ -182,50 +193,60 @@ header {
          }
      }
     .footer-content {
+      background-color: red;
       height: 90px;
-      width: 100%;
+      width: calc( 100vw - 300px );
+      // width: 110%;
       background-color: #B8C3C7;
       position: absolute;
       bottom:0px;
       right:0px;
       .form_content{
         height: 50px;
-        width: 100%;
+        width: calc( 100vw - 340px );
+        // width: calc( 100% - 40px );
         margin-top: 20px;
         margin-left: 40px;
         position: relative;
-        textarea{
-          height: 25px;
-          font-size: 16px;
-          color: #434A54;
-          float: left;
-          padding-left: 10px;
-          margin: 12px;
-          padding-top: 10px;
-          padding-bottom: 15px;
-          position: absolute;
-          top: -13px;
-          left: 0px;
-          width: 80%;
-          z-index: 1;
-                    }
+        .footer-body {
+          background-color: blue;
+          height: 48px;
+          width: 900px;
+          // position:relative;
+        }
+          textarea{
+            height: 25px;
+            font-size: 16px;
+            color: #434A54;
+            // float: left;
+            padding-left: 10px;
+            margin-top: 12px;
+            padding-top: 10px;
+            padding-bottom: 15px;
+            position: absolute;
+            top: -13px;
+            left: 0px;
+            width: 87%;
+            // z-index: 1;
+            }
         }
         .fa {
-          position:absolute;
-          bottom: 8px;
-          right: 210px;
-          z-index: 2;
-          }
+          position: absolute;
+          bottom: 16px;
+          right: 135px;
+          z-index: 1;
+            }
         #submit {
           height: 50px;
           width: 80px;
           background-color: #38AEF0;
           color:#FFF;
-          float:left;
-          margin-left: 15px;
-          position:absolute;
-          right: 70px;
-          top: 0px;
+          float: right;
+          margin-right: 30px;
+          // position:absolute;
+          // right: 93px;
+          // top: 0px;
+          // z-index: 1;
         }
        }
      }

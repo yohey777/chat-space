@@ -11,8 +11,8 @@
     .contents
       .left-contents
         .lefttop-content
-          %i.fa.fa-pencil-square-o
           %i.fa.fa-cog
+          %i.fa.fa-pencil-square-o
           %p.lefttop name
         .leftbottom-content
           %p
@@ -30,14 +30,14 @@
       .right-contents
         %a.editbox edit
         .main-header.clearfix
-          %p.header-groupname ◯◯のグループ
-          .menber-name Menber:◯◯
+          %p.header-groupname Sampleグループ
+          .menber-name Menber:ryosukemaehira
         .chat-box
           .nameday-box
-            %p.chat-name yohei
+            %p.chat-name ryosukemaehira
             %p.chat-day 2016/10/02 06:27:07
           .text-box
-            %p.chat-textおはよう
+            %p.chat-text なるほど
         .chat-box2
           .nameday-box
             %p.chat-name sasaki
@@ -49,7 +49,7 @@
             %label.upload-label{for: "upload-icon"}
               %i.fa.fa-picture-o
                 = file_field_tag :image, id: "upload-icon",style: "display:none"
-            %textarea{:placeholder => "type a message",:cols => "100", :name => "kanso", :rows => "2",:src => "far.fa-image"}
+            %textarea{:placeholder => "type a message",:cols => "140", :name => "kanso", :rows => "2",:src => "far.fa-image"}
             %input#submit{:type => "submit", :value => "Send"}/
 
           / .chat-main__footer
