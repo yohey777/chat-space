@@ -154,53 +154,5 @@
             }
            }
        }
-    .footer-content {
-      background-color: red;
-      height: 90px;
-      width: calc( 100vw - 300px );
-      background-color: #B8C3C7;
-      position: absolute;
-      bottom:0px;
-      right:0px;
-      .form_content{
-        height: 50px;
-        width: calc( 100vw - 340px );
-        margin-top: 20px;
-        margin-left: 40px;
-        position: relative;
-        .footer-body {
-          background-color: blue;
-          height: 48px;
-          width: 900px;
-         }
-          textarea{
-            height: 25px;
-            font-size: 16px;
-            color: #434A54;
-            padding-left: 10px;
-            margin-top: 12px;
-            padding-top: 10px;
-            padding-bottom: 15px;
-            position: absolute;
-            top: -13px;
-            left: 0px;
-            width: 86%;
-            }
-        }
-        .fa {
-          position: absolute;
-          bottom: 16px;
-          right: 140px;
-          z-index: 1;
-          }
-        #submit {
-          height: 50px;
-          width: 80px;
-          background-color: #38AEF0;
-          color:#FFF;
-          float: right;
-          margin-right: 40px;
-        }
-       }
      }
     }
