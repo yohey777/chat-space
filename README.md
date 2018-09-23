@@ -49,8 +49,8 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|nickname|integer|null: false,add_index unique: true|
-|mail|string|null: false,add_index,unique: true|
+|nickname|integer|null: false,add_index,unique: true|
+|mail|string|null: false, add_index, unique: true|
 |password|string|null: false|
 
 
@@ -66,7 +66,7 @@ Things you may want to cover:
 |image|integer||
 |text|integer||
 |user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false,foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 
 
 ### Association
