@@ -49,7 +49,7 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|nickname|integer|null: false,add_index,unique: true|
+|nickname|integer|null: false, add_index, unique: true|
 |mail|string|null: false, add_index, unique: true|
 |password|string|null: false|
 
