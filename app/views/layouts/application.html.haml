@@ -2,9 +2,8 @@
 %html
   %head
     %meta{:charset => "utf-8"}/
-    %title テスト
+    %title chatspace
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
-    / %link{:href => "application.scss", :rel => "stylesheets"}/
   %body
     %header.clearfix
       %p.heading-sentence チャットグループが作成されました
@@ -52,30 +51,3 @@
                 = file_field_tag :image, id: "upload-icon",style: "display:none"
             %textarea{:placeholder => "type a message",:cols => "140", :name => "kanso", :rows => "2",:src => "far.fa-image"}
             %input#submit{:type => "submit", :value => "Send"}/
-
-          / .chat-main__footer
-          /   %form#new_message.chat-main__footer-form{"accept-charset" => "UTF-8", :action => "/groups/1345/messages", :enctype => "multipart/form-data", :method => "post"}
-          /     %input{:name => "utf8", :type => "hidden", :value => "✓"}/
-          /     %input{:name => "authenticity_token", :type => "hidden", :value => "cq8U9nNo0nee9/dlAdcZ+H6+xN3BV4/O424upR6ABUxyxZom3wF7gjNJTfYVEMerHFFotlcTjs4PP+dw5uf1Kg=="}/
-          /     .chat-main__footer-body
-          /       .field_with_errors
-          /         %input#message_body.message{:name => "message[body]", :placeholder => "type a message", :type => "text", :value => ""}/
-          /       %label.chat-file{:for => "message_image"}
-          /         %input#message_image.image{:name => "message[image]", :type => "file"}/
-          /         %i.fa.fa-image
-          /     %input.submit{"data-disable-with" => "Send", :name => "commit", :type => "submit", :value => "Send"}/
-
-
-
-/ !!!
-/ %html
-/   %head
-/     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-/     %title ChatSpace
-/     = csrf_meta_tags
-/     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
-/     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-/   %body
-/     %div{id: "my-id"}
-/     = yield
-/

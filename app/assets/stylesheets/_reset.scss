@@ -12,6 +12,13 @@ html{
     color:#000;
     background:#FFF;
 }
+
+body, html {
+  height: 100%;
+  background-color: white;
+  min-width: 900px;
+}
+
 /*
     TODO remove settings on BODY since we can't namespace it.
 */
