@@ -1,9 +1,10 @@
-%header.clearfix
-  %p.heading-sentence チャットグループが作成されました
+
 .contents
   .left-contents
     .lefttop-content
-      %i.fa.fa-cog
+      / %i.fa.fa-cog
+      = link_to edit_user_path(current_user) do
+        %i.fa.fa-cog
       %i.fa.fa-pencil-square-o
       %p.lefttop name
     .leftbottom-content
@@ -20,7 +21,9 @@
         %br
         %span メッセージ待ち
   .right-contents
-    %a.editbox edit
+    .topbox
+      %a.editbox edit
+      = link_to "ログイン", new_user_session_path, class: "loginbox" unless user_signed_in?
     .main-header.clearfix
       %p.header-groupname Sampleグループ
       .menber-name Menber:ryosukemaehira
@@ -44,4 +47,6 @@
             = file_field_tag :image, id: "upload-icon",style: "display:none"
         %textarea{:placeholder => "type a message",:cols => "140", :name => "kanso", :rows => "2",:src => "far.fa-image"}
         %input#submit{:type => "submit", :value => "Send"}/
+
+
 
