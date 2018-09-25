@@ -1,16 +1,25 @@
 .contents {
   height: 100%;
   width: 100%;
-  padding-top:50px;
   z-index: 2;
-  .editbox{
-    color:#38AEF0;
-    border: 1px solid #38AEF0;
-    font-size: 15px;
-    float:right;
-    margin: 28px 40px 0;
-    padding: 12.5px 20px;
-   }
+  .topbox {
+    .editbox{
+      color:#38AEF0;
+      border: 1px solid #38AEF0;
+      font-size: 15px;
+      float:right;
+      margin: 28px 40px 0;
+      padding: 12.5px 20px;
+     }
+    .loginbox {
+      color:#38AEF0;
+      border: 1px solid #38AEF0;
+      font-size: 15px;
+      float:right;
+      margin: 28px -10px 0;
+      padding: 12.5px 9px;
+     }
+    }
   .left-contents {
     height: calc( 100% - 100px );
     width: 300px;
