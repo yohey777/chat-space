@@ -5,7 +5,8 @@
       / %i.fa.fa-cog
       = link_to edit_user_path(current_user) do
         %i.fa.fa-cog
-      %i.fa.fa-pencil-square-o
+      = link_to new_group_path do
+        %i.fa.fa-pencil-square-o
       %p.lefttop name
     .leftbottom-content
       %p
