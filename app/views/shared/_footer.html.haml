@@ -1,0 +1,8 @@
+.footer-content
+  .form_content
+    %label.upload-label{for: "upload-icon"}
+      %i.fa.fa-picture-o
+        = file_field_tag :image, id: "upload-icon",style: "display:none"
+    %textarea{:placeholder => "type a message",:cols => "140", :name => "kanso", :rows => "2",:src => "far.fa-image"}
+    %input#submit{:type => "submit", :value => "Send"}/
+
