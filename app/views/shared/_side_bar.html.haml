@@ -1,0 +1,23 @@
+.left-contents
+  .lefttop-content
+    / %i.fa.fa-cog
+    = link_to edit_user_path(current_user) do
+      %i.fa.fa-cog
+    = link_to new_group_path do
+      %i.fa.fa-pencil-square-o
+    %p.lefttop name
+  .leftbottom-content
+    - current_user.groups.each do |group|
+      = link_to group_messages_path(group) do
+        %p
+          = group.name
+          %br
+          %span まだメッセージはありません
+        %p.space
+          testgroup
+          %br
+          %span まだメッセージはありません
+        %p.space
+          testgroup2
+          %br
+          %span メッセージ待ち
