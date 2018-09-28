@@ -1,0 +1,18 @@
+.contents
+  = render 'shared/side_bar'
+  = render 'shared/right-content'
+  .footer-content
+    .form_content
+      = form_for [@group, @message] do |f|
+        = f.text_field :text, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
+    / = form_tag(group_messages_path, method: :post) do
+    /   %label.upload-label{for: "upload-icon"}
+    /     %i.fa.fa-picture-o
+    /       = file_field_tag :image,:content id: "upload-icon",style: "display:none"
+    /   %textarea{:placeholder => "type a message",:cols => "140", :name => "text", :rows => "2",:src => "far.fa-image"}
+    /   %input#submit{:type => "submit", :value => "Send"}/
