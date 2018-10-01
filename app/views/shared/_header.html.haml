@@ -1,0 +1,6 @@
+.topbox
+  %a.editbox edit
+  = link_to "ログイン", new_user_session_path, class: "loginbox" unless user_signed_in?
+.main-header.clearfix
+  %p.header-groupname Sampleグループ
+  .menber-name Menber:ryosukemaehira
