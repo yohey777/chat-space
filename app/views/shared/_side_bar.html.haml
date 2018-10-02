@@ -12,12 +12,5 @@
         %p
           = group.name
           %br
-          %span まだメッセージはありません
-        %p.space
-          testgroup
-          %br
-          %span まだメッセージはありません
-        %p.space
-          testgroup2
-          %br
-          %span メッセージ待ち
+          %span
+          = group.show_last_message

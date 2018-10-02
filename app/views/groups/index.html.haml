@@ -1,4 +1,7 @@
 .contents
   = render 'shared/side_bar'
-  = render 'shared/right-content'
-  = render 'shared/footer'
+  / renderの中にrenderは使ってはいけない。divの中に閉じてあげる
+  .right-contents
+    = render 'shared/header'
+    = render 'shared/right-message'
+    = render 'shared/footer'

@@ -1,0 +1,8 @@
+.contents
+  = render 'shared/side_bar'
+  .right-contents
+    = render 'shared/header'
+    .right-mainbody
+      = render :partial => "message", :collection => @messages, :as => "message"
+  .footer-content
+    = render 'message-footer'

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180925095849) do
+ActiveRecord::Schema.define(version: 20180926124539) do
 
   create_table "articles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
@@ -18,15 +18,6 @@ ActiveRecord::Schema.define(version: 20180925095849) do
     t.text     "body",       limit: 65535
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
-  end
-
-  create_table "group_users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "name",       null: false
-    t.integer  "user_id",    null: false
-    t.integer  "group_id",   null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["name"], name: "index_group_users_on_name", using: :btree
   end
 
   create_table "groups", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -44,12 +35,12 @@ ActiveRecord::Schema.define(version: 20180925095849) do
   end
 
   create_table "messages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "image"
-    t.integer  "text"
     t.integer  "user_id",    null: false
     t.integer  "group_id",   null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "image"
+    t.string   "text"
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
