@@ -158,7 +158,7 @@ GEM
       railties (>= 4.2.0, < 5.3)
     ruby_parser (3.11.0)
       sexp_processor (~> 4.9)
-    sass (3.5.7)
+    sass (3.6.0)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -232,4 +232,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.16.4
+   1.16.5
