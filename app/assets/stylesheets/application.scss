@@ -1,10 +1,14 @@
 @import "./reset";
 @import "font-awesome";
-@import "main-contents";
 @import "header-content";
-@import "footer-content";
+@import "maincontent-footer";
 @import "config/colors";
 @import "modules/flash";
 @import "modules/user";
 @import "modules/group";
-@import "message";
+@import "message-footer";
+@import "main-contents";
+@import "left-content";
+@import "right-content";
+@import "editbox";
+@import "message-content";
