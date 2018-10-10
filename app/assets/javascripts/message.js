@@ -34,13 +34,14 @@ $(function(){
       var html = buildHTML(data);
       $('.right-mainbody').append(html)
       $('.form__submit').prop('disabled', false);
-      $('#message_text').val('');
-      $('#message_image').val('');
+      $('#new_message')[0].reset();
       $messages = $('.right-mainbody');
       $messages.animate({scrollTop: $messages[0].scrollHeight}, 'fast');
     })
-    .fail(function(){
+    .fail(function(data){
       alert('error');
+      var html = buildHTML(data);
+      $('.form__submit').prop('disabled', false);
     })
   })
 });
