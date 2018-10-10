@@ -1,6 +1,5 @@
 $(function(){
   function buildHTML(message){
-    var image = message.image ? `<img src = '${message.image}' width="256" height="256">` : '';
     var html = `
           <div class="chat-box">
               <div class="nameday-box">
@@ -35,9 +34,8 @@ $(function(){
       $('.right-mainbody').append(html)
       $('.form__submit').prop('disabled', false);
       $('#message_text').val('');
-      $('#message_image').val('');
       $messages = $('.right-mainbody');
-      $messages.animate({scrollTop: $messages[0].scrollHeight}, 'fast');
+      $messages.animate({scrollTop: $messages[0].scrollHeight}, 10000);
     })
     .fail(function(){
       alert('error');
