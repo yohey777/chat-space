@@ -7,6 +7,7 @@
 # Ignore bundler config.
 /.bundle
 
+/public/uploads
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
@@ -16,18 +17,4 @@
 # Ignore Byebug command history file.
 .byebug_history
 
-*.jpg
 
-public/uploads/message/image/405/dog_img_long-chihuahua.jpg
-
-*.jpg
-
-*.jpeg
-
-public/uploads/message/image/300/mohumohu.jpeg
-
-*.jpeg
-
-*.jpeg
-
-*.jpeg
