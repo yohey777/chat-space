@@ -2,6 +2,7 @@
   .nameday-box
     %p.chat-name
       = message.user.name
-    %p.chat-day 2016/10/02 06:27:07
+    %p.chat-day
+      = message.created_at
   .text-box
     = message.text
