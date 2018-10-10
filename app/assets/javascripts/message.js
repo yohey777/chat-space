@@ -2,19 +2,19 @@ $(function(){
   function buildHTML(message){
     var image = message.image ? `<img src = '${message.image}' width="256" height="256">` : '';
     var html = `
-<div class="chat-box">
-    <div class="nameday-box">
-<p class="chat-name">
-${message.user_name}
-</p>
-<p class="chat-day">2016/10/02 06:27:07</p>
-</div>
-<div class="text-box">
-<p class="chat-text"></p>
-${message.text}
-${image}
-</div>
-</div>`
+          <div class="chat-box">
+              <div class="nameday-box">
+                <p class="chat-name">
+                  ${message.user_name}
+                </p>
+                <p class="chat-day">${message.created_at}</p>
+              </div>
+              <div class="text-box">
+                <p class="chat-text"></p>
+                  ${message.text}
+                  ${image}
+              </div>
+          </div>`
     return html;
   }
   $('.new_message').on('submit', function(e){
@@ -31,7 +31,6 @@ ${image}
       contentType: false
     })
     .done(function(data){
-      console.log(data);
       var html = buildHTML(data);
       $('.right-mainbody').append(html)
       $('.form__submit').prop('disabled', false);
