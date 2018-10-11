@@ -1,22 +1,8 @@
 .chat-box
   .nameday-box
     %p.chat-name
-      / - binding.pry
       = message.user.name
-    %p.chat-day 2016/10/02 06:27:07
+    %p.chat-day
+      = message.created_at
   .text-box
-    %p.chat-text
     = message.text
-
-
-/ .message
-/   .upper-message
-/     .upper-message__user-name
-/       = message.user.name
-/     .upper-message__date
-/       = format_posted_time(message.created_at)
-/   .lower-meesage
-/     - if message.content.present?
-/       %p.lower-message__content
-/         = message.content
-/     = image_tag message.image.url, class: 'lower-message__image' if message.image.present?

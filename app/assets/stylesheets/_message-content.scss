@@ -1,0 +1,32 @@
+  .right-mainbody {
+  height: calc( 100vh - 15% - 90px );
+  overflow-y: scroll;
+  width: 100%;
+  .chat-box {
+    padding-left:40px;
+    padding-top:46px;
+    .nameday-box {
+      // background-color: red;
+      .chat-name {
+        font-size:16px;
+        font-weight: bold;
+        color:#434A54;
+        float:left;
+       }
+      .chat-day {
+        font-size: 12px;
+        padding-left:10px;
+        color:#999999;
+        float:left;
+        padding-top: 4px;
+       }
+      }
+      .text-box {
+        clear:both;
+        .chat-text {
+          padding-top: 10px;
+          font-size:14px;
+        }
+       }
+   }
+}
