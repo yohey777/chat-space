@@ -1,4 +1,14 @@
 class UsersController < ApplicationController
+  def index
+    #currentユーザーは取り除く
+    # @users =User.where('name LIKE(?) and name != ?', "%#{params[:keyword]}%",current_user.name)
+    @users =User.where('name LIKE(?) and name != ?', "%#{params[:keyword]}%",current_user.name)
+    respond_to do |format|
+      format.html
+      format.json
+    end
+  end
+
   def edit
 
   end
