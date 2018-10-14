@@ -48,7 +48,11 @@ $(document).on('turbolinks:load', function() {
     })
   })
 
-var interval = setInterval(function(){
+    $(function(){
+    setInterval(update, 5000);
+  });
+
+  function update(){
     var presentMessageId = $('.chat-box').last().attr('id')
     var presentHTML = window.location.href
      if (presentHTML.match(/\/groups\/\d+\/messages/)) {
@@ -78,6 +82,6 @@ var interval = setInterval(function(){
      } else {
       clearInterval(interval)
     }
-  },5000);
+  }
 });
 
