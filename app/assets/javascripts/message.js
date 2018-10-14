@@ -1,7 +1,6 @@
 
 
 $(document).on('turbolinks:load', function() {
-    // setInterval(function() {
   function buildHTML(message){
     var image = message.image ? `<img src = '${message.image}' width="256" height="256">` : '';
     var html = `
@@ -41,7 +40,6 @@ $(document).on('turbolinks:load', function() {
       $messages.animate({scrollTop: $messages[0].scrollHeight}, 'fast');
     })
     .fail(function(data){
-      // alert('error');
       var html = buildHTML(data);
     })
     .always(function(data){
@@ -50,20 +48,11 @@ $(document).on('turbolinks:load', function() {
     })
   })
 
-// ここから下が自動更新
 var interval = setInterval(function(){
-    // setIntervalで5秒ごとに更新
-     var presentMessageId = $('.chat-box').last().attr('id')
-     // console.log(presentMessageId)
-     // 最新のメッセージからidを取得
+    var presentMessageId = $('.chat-box').last().attr('id')
     var presentHTML = window.location.href
-    // console.log(presentHTML)
-    // 現在のURLを表示
-
-    // ↓メッセージ画面以外だと反応しないようにする
      if (presentHTML.match(/\/groups\/\d+\/messages/)) {
       console.log(presentHTML)
-    // 現在のURLからIDを取得
        $.ajax ({
         url: presentHTML,
         type: 'GET',
@@ -73,24 +62,18 @@ var interval = setInterval(function(){
         contentType: false
       })
        .done(function(json){
-        // insertHTMLを空欄として定義する
         var insertHTML = "";
 
         json.forEach(function(message){
           if (message.id > presentMessageId){
-        // insertHTMLにbuildHTMLを加える（messageの中身は変数）また、buildHTMLは非同期のつぶやき内容
             insertHTML += buildHTML(message);
-            // cosole.log(insertHTML)
-        // 右側のright-mainbodyに非同期のつぶやきであるbuildHTMLを入れていく作業
             $messages = $('.right-mainbody');
             $messages.append(insertHTML);
             $messages.animate({scrollTop: $messages[0].scrollHeight}, 'fast');
-            // alert("success")
           }
         });
       })
        .fail(function(data){
-        // alert('error')
       });
      } else {
       clearInterval(interval)
