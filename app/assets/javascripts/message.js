@@ -67,7 +67,6 @@ $(document).on('turbolinks:load', function() {
       })
        .done(function(json){
         var insertHTML = "";
-
         json.forEach(function(message){
           if (message.id > presentMessageId){
             insertHTML += buildHTML(message);
@@ -78,6 +77,7 @@ $(document).on('turbolinks:load', function() {
         });
       })
        .fail(function(data){
+              alert('失敗');
       });
      } else {
       clearInterval(interval)
