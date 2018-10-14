@@ -1,8 +1,10 @@
+
+
 $(document).on('turbolinks:load', function() {
   function buildHTML(message){
     var image = message.image ? `<img src = '${message.image}' width="256" height="256">` : '';
     var html = `
-          <div class="chat-box">
+          <div class="chat-box" id="${message.id}">
               <div class="nameday-box">
                 <p class="chat-name">
                   ${message.user_name}
@@ -38,7 +40,6 @@ $(document).on('turbolinks:load', function() {
       $messages.animate({scrollTop: $messages[0].scrollHeight}, 'fast');
     })
     .fail(function(data){
-      alert('error');
       var html = buildHTML(data);
     })
     .always(function(data){
@@ -46,4 +47,41 @@ $(document).on('turbolinks:load', function() {
       $('.form__submit').prop('disabled', false);
     })
   })
+
+    $(function(){
+    setInterval(update, 5000);
+  });
+
+  function update(){
+    var presentMessageId = $('.chat-box').last().attr('id')
+    var presentHTML = window.location.href
+     if (presentHTML.match(/\/groups\/\d+\/messages/)) {
+      console.log(presentHTML)
+       $.ajax ({
+        url: presentHTML,
+        type: 'GET',
+        data: {id: presentMessageId},
+        dataType: 'json',
+        processData: false,
+        contentType: false
+      })
+       .done(function(json){
+        var insertHTML = "";
+        json.forEach(function(message){
+          if (message.id > presentMessageId){
+            insertHTML += buildHTML(message);
+            $messages = $('.right-mainbody');
+            $messages.append(insertHTML);
+            $messages.animate({scrollTop: $messages[0].scrollHeight}, 'fast');
+          }
+        });
+      })
+       .fail(function(data){
+              alert('失敗');
+      });
+     } else {
+      clearInterval(interval)
+    }
+  }
 });
+
