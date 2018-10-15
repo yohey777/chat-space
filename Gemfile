@@ -67,6 +67,10 @@ gem 'pry-rails'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'capybara'
+
+group :production do
+  gem 'unicorn'
+end
 # gem 'rspec-rails', '~> 3.5'
 # gem 'rails-controller-testing'
 # gem 'faker'
