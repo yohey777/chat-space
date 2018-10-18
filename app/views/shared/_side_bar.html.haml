@@ -4,7 +4,8 @@
       %i.fa.fa-cog
     = link_to new_group_path do
       %i.fa.fa-pencil-square-o
-    %p.lefttop name
+    %p.lefttop
+      = current_user.name
   .leftbottom-content
     - current_user.groups.each do |group|
       = link_to group_messages_path(group) do

@@ -1,7 +1,8 @@
 .left-contents {
-    height: calc( 100% - 100px );
+    min-height: 300px;
     width: 300px;
     float:left;
+    overflow-y: scroll;
     .lefttop-content {
     background-color:#253141;
     height: 100px;
@@ -32,9 +33,10 @@
     }
     .leftbottom-content {
     background-color:#2f3e51;
-    height:  100%;
+    height: calc( 100vh - 100px );
     width: 300px;
     float:left;
+    overflow: scroll;
       p {
         margin-top: 20px;
         color: #FFFFFF;
