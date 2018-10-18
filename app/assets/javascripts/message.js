@@ -1,5 +1,3 @@
-
-
 $(document).on('turbolinks:load', function() {
   function buildHTML(message){
     var image = message.image ? `<img src = '${message.image}' width="256" height="256">` : '';
@@ -18,6 +16,8 @@ $(document).on('turbolinks:load', function() {
               </div>
           </div>`
     return html;
+    // console.log(message.text)
+    console.log(image)
   }
   $('.new_message').on('submit', function(e){
     e.preventDefault();
@@ -56,7 +56,6 @@ $(document).on('turbolinks:load', function() {
     var presentMessageId = $('.chat-box').last().attr('id')
     var presentHTML = window.location.href
      if (presentHTML.match(/\/groups\/\d+\/messages/)) {
-      console.log(presentHTML)
        $.ajax ({
         url: presentHTML,
         type: 'GET',
