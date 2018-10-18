@@ -1,6 +1,9 @@
 .topbox
-  %a.editbox edit
-  = link_to "ログイン", new_user_session_path, class: "loginbox" unless user_signed_in?
+  .editbox
+    = link_to 'edit', "/groups/#{@group.id}/edit", method: :get
 .main-header.clearfix
-  %p.header-groupname Sampleグループ
-  .menber-name Menber:ryosukemaehira
+  %p.header-groupname
+    = @group.name
+  .menber-name
+  Menber:
+  = current_user.name
